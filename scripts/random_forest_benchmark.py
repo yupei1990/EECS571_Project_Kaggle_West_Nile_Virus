@@ -82,7 +82,7 @@ train = train.ix[:,(train != -1).any(axis=0)]
 test = test.ix[:,(test != -1).any(axis=0)]
 
 # Random Forest Classifier 
-clf = ensemble.RandomForestClassifier(n_jobs=-1, n_estimators=1000, min_samples_split=1)
+clf = ensemble.RandomForestClassifier(n_jobs=-1, n_estimators=1000, min_samples_split=3)
 clf.fit(train, labels)
 
 # create predictions and submission file
